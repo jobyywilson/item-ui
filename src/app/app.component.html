@@ -1,0 +1,27 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top" *ngIf="currentUser">
+    
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">ABC Limited</a>
+        
+        
+    </div>
+      <div class="align-right">
+            <ul class="nav navbar-nav">
+                <li><button type="submit" class="btn navbar-btn btn-danger" (click)="logout()"  value="Log Out">Log Out</button></li>
+            </ul>     
+    </div>
+    
+</nav>
+<app-item-list class="left" *ngIf="currentUser"></app-item-list>
+<div class="container">
+        
+        <!-- main app container -->
+        <div class="right .field-cont" >
+                <router-outlet></router-outlet>
+
+        </div>
+            
+  
+</div>
+

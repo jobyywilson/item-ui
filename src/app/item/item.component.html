@@ -1,0 +1,20 @@
+<div class="card mt-4">
+    <h4 class="card-header">Dynamic form of {{itemId}}</h4>
+    <div class="card-body">
+        <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+                {{tile.text}}
+                <input *ngIf="tile.type=='TEXT'" class="form-control form-control-lg field" type="text" [(ngModel)]="data[tile.fieldName]">
+                <select *ngIf="tile.type!='TEXT'" class="form-control field" id="exampleFormControlSelect2" [(ngModel)]="data[tile.fieldName]">
+                    <option *ngFor="let sample of sampleData">{{sample}}</option>
+                </select>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <div class="align-right">
+            <input type="button" class="btn btn-outline-primary mr-1" (click)="submit()"  value="Submit">
+            <input type="button" class="btn btn-outline-primary" (click)="reset()" value="Reset">
+        </div>
+        
+
+    </div>
+</div>

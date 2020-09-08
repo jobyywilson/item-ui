@@ -1,0 +1,19 @@
+.field-cont{
+    width: 100%;
+    margin: auto;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+.left {
+    float: left;
+    width: 20%;
+}
+.right {
+    float: right;
+    width: 95%;
+    padding-top: 6%;
+}
+.logout{
+    float:right;
+}

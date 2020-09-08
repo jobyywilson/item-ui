@@ -1,0 +1,10 @@
+.field {
+    width: 80%;
+    margin : 2%;
+}
+.align-right{
+    float: right;
+}
+.fieldbtn{
+    margin: 14 px;
+}
